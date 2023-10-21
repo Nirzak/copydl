@@ -1,4 +1,4 @@
-# Instrunctions
+# Instructions
 
 Simply have to add the following line on .rtorrent.rc file
 
