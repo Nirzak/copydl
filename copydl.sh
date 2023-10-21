@@ -17,10 +17,10 @@ else
         name=$n
 fi
 
-cd /torrents/rotorrent
+cd /torrents/rtorrent
 zip -r "$name.zip" "$n" &
 wait
 curl -F chat_id="$chatid" -F "document=@\"$name.zip\"" -F caption="$n" https://api.telegram.org/bot${bottoken}/sendDocument &
-#telegram-upload -d "$name.zip" --caption "$n" >> /home/nirzak/tgup.log & #uncomment this when using telegram-upload
+#telegram-upload -d "$name.zip" --caption "$n" >> /tmp/tgup.log & #uncomment this when using telegram-upload
 wait
 rm -rf "$name.zip" #comment this when using telegram-upload command
